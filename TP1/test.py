@@ -14,7 +14,9 @@ def test_3():
 def test_4():
 	assert f.puissance(0, 2) == 0
 	assert f.puissance(-0, 3) == 0
-	assert f.puissance(0, -3) == 0
-	assert f.puissance(-0, -2) == 0
 def test_5():
 	assert f.puissance(0, 0) == 1
+def test_type_error():
+    with pytest.raises(TypeError):
+        f.puissance(0, -3)
+        f.puissance(-0, -3)

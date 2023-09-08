@@ -16,5 +16,5 @@ def puissance(a, b):
 			for function in range(-b):
 				res = res / a
 		else:
-			res = 0
+			raise TypeError("Only integers are allowed")
 	return res
