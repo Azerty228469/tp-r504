@@ -7,6 +7,9 @@ def puissance(a, b):
 			res = res * a
 	if b < 0:
 		res = 1.0
-		for function in range(-b):
-			res = res / a
+		if a != 0:
+			for function in range(-b):
+				res = res / a
+		else:
+			res = 0
 	return res
