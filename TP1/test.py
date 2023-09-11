@@ -20,3 +20,7 @@ def test_type_error():
     with pytest.raises(TypeError):
         f.puissance(0, -3)
         f.puissance(-0, -3)
+def test_value_error():
+	with pytest.raises(TypeError):
+		f.puissance(1.1, 3)
+		f.puissance(2, 3.3)
