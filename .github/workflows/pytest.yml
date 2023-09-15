@@ -18,8 +18,8 @@ jobs:
         run: echo "Nom branche:${{ github.ref }}"
       - name: Display OS name
         run: echo "Nom OS:${{ runner.os }}."
-      - name: Python Version
-        run: python --version
+      - name: Display OS version
+        run: lsb_release -a
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
         with:
