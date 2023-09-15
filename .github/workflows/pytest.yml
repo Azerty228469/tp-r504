@@ -19,7 +19,6 @@ jobs:
         run: echo "Nom branche:${{ github.ref }}"
       - name: Display OS name
         run: echo "Nom OS:${{ runner.os }}."
-      - run: lsb_release -a
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
         with:
@@ -28,3 +27,5 @@ jobs:
         run: echo "Version de python:${{ matrix.python-version }}"
       - name: Display OS version
         run: echo "Version de l'OS:${{ matrix.os-version }}"
+      - name: Other OS information
+        run: lsb_release -a
