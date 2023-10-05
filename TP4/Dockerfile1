@@ -10,8 +10,9 @@ RUN apt-get -y install pip3
 RUN pip3 install -upgrade pip
 RUN pip3 install flask-mysqldb, mysql-connector-python
 RUN mkdir /srv/templates
-RUN cp index.html ~/srv/templates/
-RUN cp app1.py ~/srv/templates/
+
+COPY index.html ~/srv/templates/
+COPY app1.py ~/srv/templates/
 
 EXPOSE 3307
 CMD ["flash", "--app", "/srv/app1", "run", "--host=0.0.0.0"]
