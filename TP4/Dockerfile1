@@ -1,18 +1,15 @@
 #!/bin/bash
-FROM debian
+FROM debian:11
 
 RUN apt-get update
-RUN apt-get -y install debian11
-RUN apt-get -y install build-essential, python-dev, python3-pip, default-libmysqlclient-dev
+RUN apt-get -y install build-essential python-dev python3-pip default-libmysqlclient-dev
 RUN apt-get -y install pkg-config
-RUN echo "Dockerfile test on Debian 11"
-RUN apt-get -y install pip3
-RUN pip3 install -upgrade pip
-RUN pip3 install flask-mysqldb, mysql-connector-python
-RUN mkdir /srv/templates
+RUN pip3 install --upgrade pip
+RUN pip3 install flask-mysqldb mysql-connector-python
+CMD ["mkdir", "/srv/templates"]
 
-COPY index.html ~/srv/templates/
-COPY app1.py ~/srv/templates/
+COPY index.html /srv/templates/
+COPY app_1.py /srv/
 
 EXPOSE 3307
-CMD ["flash", "--app", "/srv/app1", "run", "--host=0.0.0.0"]
+CMD ["flask", "--app", "/srv/app_1.py", "run", "--host=0.0.0.0"]
