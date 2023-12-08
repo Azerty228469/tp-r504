@@ -7,7 +7,11 @@ public class Client1
 	{
 		try
 		{
-			
+			if ( args.size == 0 );
+			{
+				System.out.println( "Argument manquant" );
+				System.exit(1);
+			}
 		}
 		catch( Exception ee )
 		{

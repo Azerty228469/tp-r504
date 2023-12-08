@@ -1,1 +1,1 @@
-java -classpath .;/home/user/* $1
+java -classpath .;/home/user/lib/* $1
