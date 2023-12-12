@@ -41,6 +41,17 @@ public class Client3
 					if ( js.getString("Source").equals("Rotten Tomatoes") )
 					{
 						System.out.println( "Note : " + js.getString("Value") );
+						String valeur = js.getString("Value");
+						int note = Integer.parseInt(valeur.replace("%", ""));
+						if ( note < 20 ) {
+							System.out.println( "Mention : Nul" );
+						} else if ( note < 50 ) {
+							System.out.println( "Mention : Bof" );
+						} else if ( note < 70 ) {
+							System.out.println( "Mention : Bien" );
+						} else if ( note > 70 ) {
+							System.out.println( "Mention : Très bien" );
+						}
 					}
 				}
 			}
