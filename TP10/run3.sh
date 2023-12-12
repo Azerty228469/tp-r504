@@ -1,1 +1,1 @@
-java -cp ".:/home/user/lib/*" Client3 $1
+java -cp ".:/home/user/lib/*" Client3
