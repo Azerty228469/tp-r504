@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$#" -gt "0" ]
+if [ "$#" -eq 1 ]
 then
 	chemin_absolu="$1"
 	IFS='/' read -ra chemins <<< "$chemin_absolu"
