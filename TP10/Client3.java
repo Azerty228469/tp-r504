@@ -58,6 +58,7 @@ public class Client3
 		}
 		catch( Exception ee )
 		{
+			System.out.println( "Erreur, film inexistant." );
 		}
 	}
 }
