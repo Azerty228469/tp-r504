@@ -1,0 +1,11 @@
+2. Préliminaires
+2.1 Fonctions de hashage
+Longueur du hash en bits : 128 bits
+Fiabilité : Non, l'algorithme de hash md5sum n'est plus fiable.
+Recommandé : L'algorithme sha256sum est recommandé de nos jours.
+Longueur sha256sum en bits : 256 bits.
+
+2.2 Certificats
+Nombre sur VM : 129		Nombre sur hôte : 137
+Les certificats sont-ils identiques : Non.
+Le contenu est-il identique : Oui.
